@@ -1,0 +1,19 @@
+Defnition
+A reference allows called function to modify a local variable of the caller function. For example, consider the following example program where fun() 
+is able to modify local variable x of main().
+
+Programme
+#include<iostream>
+  
+using namespace std;
+  
+void fun(int &x) { 
+    x = 20; 
+} 
+    
+int main() { 
+    int x = 10; 
+    fun(x); 
+    cout<<"New value of x is "<<x; 
+    return 0; 
+}
