@@ -1,0 +1,20 @@
+Defnition
+
+A static variable is a variable that is declared using the keyword static. The space for the static variable is allocated only one time and this is used for the entirety of the program.
+
+Once this variable is declared, it exists till the program executes. So, the lifetime of a static variable is the lifetime of the program.
+
+Programme
+#include <iostream>
+using namespace std;
+void func() {
+   static int num = 1;
+   cout <<"Value of num: "<< num <<"\n";
+   num++;
+}
+int main() {
+   func();
+   func();
+   func();
+   return 0;
+}
